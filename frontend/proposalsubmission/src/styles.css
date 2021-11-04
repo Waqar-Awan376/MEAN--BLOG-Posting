@@ -1,0 +1,137 @@
+body
+{
+  margin: 0 !important;
+  padding:0 !important;
+  background-image: url("/assets/tile_background.png");
+  font-family: 'Ubuntu', sans-serif !important;
+  color: black !important;
+}
+:root {
+  --light-black: #1a1a1a;
+  --white: #ffffff;
+  --primary-btn-clr:#c2eec6;
+  --primary-btn-clr-hover: #8fe598
+}
+/* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~*/
+.text-align-center
+{
+  text-align: center;
+}
+.margin-top-10
+{
+  margin-top: 10px;
+}
+.margin-top-80
+{
+  margin-top: 80px;
+}
+.margin-top-20
+{
+  margin-top: 20px;
+}
+.margin-bottom-10
+{
+  margin-bottom: 10px;
+}
+.margin-bottom-20
+{
+  margin-bottom: 20px;
+}
+.text-decoration-none
+{
+  text-decoration: none;
+}
+.color-black
+{
+  color: black;
+}
+.color-white
+{
+  color: white;
+}
+.detail-container
+{
+  width: 75%;
+  margin: auto;
+}
+/* ~~~~~~~~~~ PROPERTIES ~~~~~~~~~~*/
+.primary-button
+{
+  background-color: var(--primary-btn-clr);
+  padding: 10px;
+  width: 200px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  outline: none !important;
+  box-shadow: 0 0 5px 1px #4b4b4b;
+  transition: 0.4s all;
+}
+.primary-button:hover
+{
+  background-color: var(--primary-btn-clr-hover);
+  padding: 10px;
+  width: 200px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  outline: none !important;
+  box-shadow: 0 0 5px 1px black;
+}
+.secondary-button
+{
+  background-color: var(--light-black);
+  padding: 10px;
+  width: 200px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  outline: none !important;
+  box-shadow: 0 0 5px 1px #4b4b4b;
+  transition: 0.4s all;
+  color: white;
+  cursor: pointer;
+}
+.secondary-button:hover
+{
+  background-color: #4b4b4b;
+  padding: 10px;
+  width: 200px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  outline: none !important;
+  box-shadow: 0 0 5px 1px black;
+}
+.list-container
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.list-card
+{
+  border: 1px solid var(--light-black);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0.5px var(--light-black);
+  margin: 15px;
+}
+.card-detail-container
+{
+  font-size: 20px;
+  font-weight: 400;
+}
+.error-alert
+{
+  color: #f14d4d;
+  font-size: 20px;
+}
+
+form .ng-touched.ng-invalid
+{
+  background-color: #fcd3d3 !important;
+  border: 1px solid red !important;
+}

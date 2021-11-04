@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/logo.png" alt="LOGO" width="100"/>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <input type="checkbox" id="checkbox_toggle" />
+    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+    <div class="menu">
+      <li><a routerLink="/" routerLinkActive="activeLink" [routerLinkActiveOptions]="{exact:true}">Add Proposal</a></li>
+      <li><a routerLink="/all" routerLinkActive="activeLink">All Proposals</a></li>
+    </div>
+  </ul>
+</nav>

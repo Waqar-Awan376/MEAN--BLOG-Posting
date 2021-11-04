@@ -1,0 +1,30 @@
+<div *ngIf="areProposalsFetched">
+  <div *ngIf="allProposals['proposals'].length===0">
+    <h3 class="text-align-center">No Proposal Added Yet</h3>
+  </div>
+  <div  *ngIf="allProposals['proposals'].length!==0" class="proposals-container">
+    <div *ngFor="let proposal of allProposals['proposals']" class="card">
+      <div class="card-heading">
+        <h2>{{proposal.name}}</h2>
+      </div>
+      <div class="card-id">
+        <span>ID: </span><span>{{proposal._id}}</span>
+      </div>
+      <div class="card-content">
+        {{proposal.projectDescription}}
+      </div>
+      <div class="card-actions">
+        <div>
+          <button class="update-button" type="submit"><a class="color-white text-decoration-none" routerLink="/update" [queryParams]="{proposalId:proposal._id}">Update</a></button>
+        </div>
+
+        <form (ngSubmit)="deleteProposal(f)" #f='ngForm'>
+          <input type="hidden" value="{{proposal._id}}" name="proposal-id" ngModel="{{proposal._id}}">
+          <button class="delete-button" type="submit">Delete</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</div>

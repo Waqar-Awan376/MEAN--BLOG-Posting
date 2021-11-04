@@ -1,0 +1,53 @@
+<h1 class="text-align-center">Update Proposal</h1>
+<form *ngIf="isProposalFetched" class="form" (ngSubmit)="updateProposal(f)" #f='ngForm'>
+  <div class="form-container">
+    <div class="parent">
+      <div>
+        <h2>Section I: Company and Mentor Information:</h2>
+        <input type="text" class="form-input" placeholder="Contact Name" name="name" ngModel="{{this.fetchedProposal['proposal'].name}}" required #name='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!name.valid && name.touched">Please enter a name</span><br/>
+
+        <input type="text" class="form-input" placeholder="Contact Job Title" name="jobTitle" ngModel="{{this.fetchedProposal['proposal'].jobTitle}}" required #jobTitle='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!jobTitle.valid && jobTitle.touched">Please enter a job title</span><br/>
+
+        <input type="email" class="form-input" placeholder="Contact Email" name="email" ngModel="{{this.fetchedProposal['proposal'].email}}" required #email='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!email.valid && email.touched">Please enter am email</span><br/>
+
+        <input type="text" class="form-input" placeholder="Contact Phone" name="phoneNumber" ngModel="{{this.fetchedProposal['proposal'].phoneNumber}}" required #phoneNumber='ngModel'/><br/>
+        <span class="error-alert" *ngIf="!phoneNumber.valid && phoneNumber.touched">Please enter a phone number</span><br/>
+
+        <input type="text" class="form-input" placeholder="Organization/Company Name" name="organizationName" ngModel="{{this.fetchedProposal['proposal'].orgName}}" required #organizationName='ngModel'/><br/>
+        <span class="error-alert" *ngIf="!organizationName.valid && organizationName.touched">Please enter the organization name</span><br/>
+
+        <input type="text" class="form-input" placeholder="Organization Address" name="organizationAddress"  ngModel="{{this.fetchedProposal['proposal'].orgAddress}}" required #organizationAddress='ngModel'/><br/>
+        <span class="error-alert" *ngIf="!organizationAddress.valid && organizationAddress.touched">Please enter the organization address name</span><br/>
+
+        <input type="text" class="form-input" placeholder="Organization Website" name="organizationWebsite" ngModel="{{this.fetchedProposal['proposal'].orgWebsite}}" required #organizationWebsite='ngModel'/><br/>
+        <span class="error-alert" *ngIf="!organizationWebsite.valid && organizationWebsite.touched">Please enter the website</span><br/>
+
+      </div>
+      <div>
+        <h2>Section II: Project for Which Students Will Participate:</h2>
+        <input type="text" class="form-input" placeholder="Project Title" name="projectTitle" ngModel="{{this.fetchedProposal['proposal'].projectTitle}}" #projectTitle='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!projectTitle.valid && projectTitle.touched">Please enter the project title</span><br/>
+
+        <textarea class="form-input" placeholder="Project Description" name="projectDescription" rows="5" ngModel="{{this.fetchedProposal['proposal'].projectDescription}}" #projectDescription='ngModel'></textarea><br/>
+        <span class="error-alert" *ngIf="!projectDescription.valid && projectDescription.touched">Please enter the project description</span><br/>
+
+        <input type="text" class="form-input" placeholder="Technical Requirements for Project" name="technicalRequirements"  ngModel="{{this.fetchedProposal['proposal'].technicalRequirements}}" #technicalRequirements='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!technicalRequirements.valid && technicalRequirements.touched">Please enter the technical requirements</span><br/>
+
+        <input type="text" class="form-input" placeholder="Student Duties" name="studentDuties" ngModel="{{this.fetchedProposal['proposal'].studentDuties}}" #studentDuties='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!studentDuties.valid && studentDuties.touched">Please enter the student duties</span><br/>
+
+        <input type="text" class="form-input" placeholder="Student Benefits" name="studentBenefits" ngModel="{{this.fetchedProposal['proposal'].studentBenefits}}" #studentBenefits='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!studentBenefits.valid && studentBenefits.touched">Please enter the student benefits</span><br/>
+
+        <input type="text" class="form-input" placeholder="Provision for students to carry out the project" name="provision" ngModel="{{this.fetchedProposal['proposal'].provision}}" #provision='ngModel' /><br/>
+        <span class="error-alert" *ngIf="!provision.valid && provision.touched">Please enter the provision</span><br/>
+      </div>
+    </div>
+    <button class="primary-button margin-top-20 cursor-pointer" type="submit" [disabled]="f.invalid" >Submit</button>
+  </div>
+  <button class="secondary-button margin-top-20 cursor-pointer" type="button" ><a class="text-decoration-none color-white"  routerLink="/all">Cancel</a></button>
+</form>
